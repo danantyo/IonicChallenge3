@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>artikel</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-list>
+    <ion-item *ngFor="let artikel of artikelList" class="artikel-item">
+      <ion-label class="artikel-title">{{ artikel?.title }}</ion-label>
+      <ion-button slot="end" color="secondary" (click)="viewArtikel(artikel?.id)">
+        detail
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>komentar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<ion-item *ngFor="let komentar of komentarList" class="komentar-item">
+			<ion-label class="komentar-title">{{ komentar?.title }}</ion-label>
+				<ion-button slot="end" color="secondary" (click)="viewKomentar(komentar?.id)">
+				detail
+			</ion-button>
+		</ion-item>
+	</ion-list>
+</ion-content>
